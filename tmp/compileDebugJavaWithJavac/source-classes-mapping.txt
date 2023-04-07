@@ -1,0 +1,20 @@
+com/example/dddemo/databinding/FragmentSecondBinding.java
+ com.example.dddemo.databinding.FragmentSecondBinding
+com/example/dddemo/databinding/FragmentThirdBinding.java
+ com.example.dddemo.databinding.FragmentThirdBinding
+com/example/dddemo/ThirdFragment.java
+ com.example.dddemo.ThirdFragment
+ com.example.dddemo.ThirdFragment$1
+com/example/dddemo/SecondFragment.java
+ com.example.dddemo.SecondFragment
+ com.example.dddemo.SecondFragment$1
+ com.example.dddemo.SecondFragment$2
+com/example/dddemo/Yugioh.java
+ com.example.dddemo.Yugioh
+com/example/dddemo/BuildConfig.java
+ com.example.dddemo.BuildConfig
+com/example/dddemo/databinding/ActivityMainBinding.java
+ com.example.dddemo.databinding.ActivityMainBinding
+com/example/dddemo/MainActivity.java
+ com.example.dddemo.MainActivity
+ com.example.dddemo.MainActivity$1

@@ -1,0 +1,79 @@
+MICROCODER                            EFFECT            300                    105         
+
+
+INFERNOBLE                            EFFECT            500                           500
+
+
+NUMBERTEN                                    WIND                    1000                    2600
+
+
+PSYFRAMEGE                             PYSCHIC            1000                          200
+
+
+SANGAN                                    FIEND            1000                    600
+    
+WITCHOFTHEBLACKFOREST            SPELLCASTER    1100                        1200
+
+
+CODEGENERATOR                     EFFECT            1300                          500
+
+
+ELEMENTALEROEFFECT             1300                    1100                    500
+
+
+SUBLIMATIONKNIGHT                     FIRE                     1300                    200
+
+
+TOONHARPIELADY                    WIND                     1300                    1400
+
+
+ENVOYOFCHAOS                            WARRIOR             1500                    300
+
+
+EVOCATOREVEQUE                    FIRE                    1500                    1000
+
+
+DWARFSTARDRAGON                     DRAGON            1700                    1200
+
+
+CHAOSVALKYRIA                            FAIRY                    1800                    1050
+
+
+KEEPEROFDRAGONMAGIC            DRAGON            1800                    1300
+
+
+MUDRAGONOFTHESWAMP            FUSION            1900                    1600
+
+
+CURSEOFDRAGONFIRE                           DARK                    2000                    1500
+
+
+NUMBERSANAPHONDTHESKY                 ROCK                    2100                    2700
+
+
+MASKEDHEROBLAST                     WARRIOR             2200                    1800
+
+
+MASKEDHEROGOKA                    WARRIOR            2200                    1800
+
+
+VALKYRIESIGRUN                            FAIRY                    2200                    2400
+
+
+CHAOSSORCERER                    DARK                    2300                    2000
+
+
+DARKFLAREDRAGON                    EFFECT            2400                    1200
+
+
+FRIGHTFURSABRETOOTH            FIEND            2400                    200
+
+
+LIGHTPULSARDRAGON                    DRAGON            2500                    1500
+
+
+PSYFRAMEDRIVER                    PYSCHIC            2500                    400
+
+
+STARDUSTDRAGON                    DRAGON            2500                    2000
+blah                                            blah                           0                        0
