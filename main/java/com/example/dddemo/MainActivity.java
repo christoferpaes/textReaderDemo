@@ -29,50 +29,42 @@ import java.util.Scanner;
 public class MainActivity extends AppCompatActivity {
 
 
-    private ActivityMainBinding binding1;
-    private ListView listView;
-    private ArrayList<String> holdingList;
-    private ArrayAdapter<String> itemsAdapter;
+    private ActivityMainBinding a;
+    private ListView l;
+    private ArrayList<String> h;
+    private ArrayAdapter<String> i;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-     Scanner scannAH = new Scanner(System.in);
+     Scanner s = new Scanner(System.in);
 
-     final int LENGTH = 99999;
+     final int L = 99999;
 
+     String hS = " " ;
 
-
-
-     String holdingString = " " ;
-
-     String [] yugiohName = new String[LENGTH];String assetName = "Yugioh.txt";
+     String [] yN = new String[L];String aN = "Yugioh.txt";
         super.onCreate(savedInstanceState);
-         binding1 = ActivityMainBinding.inflate(getLayoutInflater());
-         setContentView(binding1.getRoot());
+         a = ActivityMainBinding.inflate(getLayoutInflater());
+         setContentView(a.getRoot());
 
-
-
-
-
-
-        holdingString = LoadData(assetName);
-        Yugioh [] yugioh12 = new Yugioh[holdingString.length()];
-        for(int tt = 0 ; tt < 100 ; ++tt){
-            yugioh12[tt] = new Yugioh();
+        hS = LoadData(aN);
+        Yugioh [] y = new Yugioh[hS.length()];
+        for(int t = 0 ; t < 100 ; ++t){
+            y[t] = new Yugioh();
 
         }
-        int po = loadYugioh(yugioh12,holdingString);
-        listView = findViewById(R.id.listView);
-        holdingList = new ArrayList<String>();
+        int p = loadYugioh(y,hS);
+        l = findViewById(R.id.listView);
+        h = new ArrayList<String>();
         for(int az = 0; az< 20; ++az) {
 
-                    holdingList.add(yugioh12[az].getName());
+                    h.add(y[az].getName());
 
         }
 
-        itemsAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, holdingList);
-     listView.setAdapter(itemsAdapter);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        i = new ArrayAdapter(this, android.R.layout.simple_list_item_1, h);
+     l.setAdapter(i);
+        l.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String selectedItem = (String) parent.getItemAtPosition(position);
@@ -90,80 +82,75 @@ public class MainActivity extends AppCompatActivity {
 
     }
 @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+    public boolean onCreateOptionsMenu(Menu m) {
+        getMenuInflater().inflate(R.menu.menu_main, m);
         return true;
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+    public boolean onOptionsItemSelected(MenuItem i) {
+        int d = i.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (d == R.id.action_settings) {
             return true;
         }
 
-        return super.onOptionsItemSelected(item);
+        return super.onOptionsItemSelected(i);
     }
 
     public static int loadYugioh
-            ( Yugioh[] yugioh,String file )
+            ( Yugioh[] y,String f )
     {
-        Scanner keyboard = new Scanner( System.in );
-        int nYugiohCards = 0;
-        Scanner inFile = new Scanner( file );
+        Scanner k = new Scanner( System.in );
+        int nY = 0;
+        Scanner in = new Scanner( f );
         do
         {
-            yugioh[nYugiohCards] = new Yugioh();
+            y[nY] = new Yugioh();
 
-            yugioh[nYugiohCards].name = inFile.next();
-
-
-            yugioh[nYugiohCards].type = inFile.next();
-
-            yugioh[nYugiohCards].attackPower = inFile.nextInt();
+            y[nY].name = in.next();
 
 
+            y[nY].type = in.next();
 
-
-            yugioh[nYugiohCards].defensePower = inFile.nextInt();
+            y[nY].attackPower = in.nextInt();
 
 
 
 
-            ++nYugiohCards;
-        }while ( yugioh[ nYugiohCards -1].defensePower != 0 );
-        --nYugiohCards;
+            y[nY].defensePower = in.nextInt();
 
-        return nYugiohCards;
+
+
+
+            ++nY;
+        }while ( y[ nY -1].defensePower != 0 );
+        --nY;
+
+        return nY;
     }
 
 
 
-    public String LoadData(String inFile) {
-        String tContents = "";
-        Scanner file = new Scanner( inFile );
+    public String LoadData(String in) {
+        String c = "";
+        Scanner f = new Scanner( in );
 
 
         try {
-            InputStream stream = getAssets().open(inFile);
+            InputStream s = getAssets().open(in);
 
-            int size = stream.available();
-            byte[] buffer = new byte[size];
-            stream.read(buffer);
-            stream.close();
-            tContents = new String(buffer);
+            int l = s.available();
+            byte[] b = new byte[l];
+            s.read(b);
+            s.close();
+            c = new String(b);
         }
         catch (IOException e) {
             // Handle exceptions here
         }
 
-        return tContents;
+        return c;
 
     }
 
